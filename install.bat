@@ -33,28 +33,35 @@ if errorlevel 1 (
 echo [OK] pip found
 echo.
 
-REM Install Flask
+REM Install Flask with error handling
 echo Installing Flask...
-pip install flask
+pip install flask --force-reinstall --no-deps
 if errorlevel 1 (
-    echo [ERROR] Failed to install Flask
-    pause
-    exit /b 1
+    echo [WARNING] Standard Flask install failed, trying alternative method...
+    pip install flask --user --force-reinstall
+    if errorlevel 1 (
+        echo [WARNING] Flask install had issues, but continuing...
+        echo Flask might already be installed or have dependency conflicts
+        echo The application will try to use existing Flask installation
+    )
 )
 
-echo [OK] Flask installed
+echo [OK] Flask installation attempted
 echo.
 
-REM Install PyInstaller
+REM Install PyInstaller with error handling
 echo Installing PyInstaller...
-pip install pyinstaller
+pip install pyinstaller --force-reinstall --no-deps
 if errorlevel 1 (
-    echo [ERROR] Failed to install PyInstaller
-    pause
-    exit /b 1
+    echo [WARNING] Standard PyInstaller install failed, trying alternative method...
+    pip install pyinstaller --user --force-reinstall
+    if errorlevel 1 (
+        echo [WARNING] PyInstaller install had issues, continuing anyway...
+        echo Will attempt to create executable with existing installation
+    )
 )
 
-echo [OK] PyInstaller installed
+echo [OK] PyInstaller installation attempted
 echo.
 
 REM Check if main script exists

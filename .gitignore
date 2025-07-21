@@ -1,0 +1,138 @@
+# ============================================
+# Blind Coaching Application - Git Ignore
+# ============================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.spec
+build/
+dist/
+*.manifest
+*.exe
+*.app
+*.dmg
+*.pkg
+
+# Virtual Environments
+venv/
+venv_*/
+ENV/
+env/
+.venv/
+.ENV/
+.env
+
+# Flask
+instance/
+.webassets-cache
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Session reports (optional - comment out if you want to track them)
+coaching_session_report_*.txt
+
+# Build artifacts
+*.pyc
+*.pyo
+*.pyd
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Package files
+*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Test coverage
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Windows specific
+*.lnk
+desktop.ini
+
+# Conda environments
+conda-meta/
+
+# PyInstaller warnings
+warn-*.txt
+xref-*.html
