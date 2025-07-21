@@ -1,0 +1,30 @@
+=== Goal (SMART) ===
+What specifically do you want to achieve? [Specific]
+How will you measure your success? [Measurable]
+Is this goal realistic with your current resources? [Asses]
+Why is this goal important to you right now? [Relevant]
+By when do you want to accomplish this? [Specific TimeFrame]
+
+=== Reality ===
+What is your current situation regarding this goal?
+What have you already tried?
+What obstacles are you facing?
+What resources do you currently have?
+
+=== Options - People ===
+What are all the possible ways you could approach this?
+What would you do if you had unlimited resources?
+Who could help you with this goal?
+What alternatives exist if your first choice doesn't work?
+
+=== Options - Action ===
+What are all the possible ways you could approach this?
+What would you do if you had unlimited resources?
+Who could help you with this goal?
+What alternatives exist if your first choice doesn't work?
+
+=== Way Forward ===
+What specific actions will you take?
+When will you start each action?
+What support do you need?
+How will you track your progress?
