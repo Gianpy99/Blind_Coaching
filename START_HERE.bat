@@ -13,19 +13,17 @@ echo ===============================================
 echo             QUICK START OPTIONS
 echo ===============================================
 echo.
-echo [1] Run Application (Requires Python)
-echo [2] Install and Create Executable
-echo [3] Run Simple Installer
-echo [4] View Documentation
-echo [5] Exit
+echo [1] Run Application Now
+echo [2] Edit Coaching Questions
+echo [3] View Documentation
+echo [4] Exit
 echo.
-set /p choice="Choose an option (1-5): "
+set /p choice="Choose an option (1-4): "
 
 if "%choice%"=="1" goto run_app
-if "%choice%"=="2" goto create_exe
-if "%choice%"=="3" goto simple_install
-if "%choice%"=="4" goto docs
-if "%choice%"=="5" goto exit
+if "%choice%"=="2" goto edit_questions
+if "%choice%"=="3" goto docs
+if "%choice%"=="4" goto exit
 
 :run_app
 echo.
@@ -47,29 +45,22 @@ echo.
 python blind_coaching_standalone.py
 goto menu
 
-:create_exe
+:edit_questions
 echo.
 echo ===============================================
-echo        CREATING STANDALONE EXECUTABLE
+echo           EDIT COACHING QUESTIONS
 echo ===============================================
 echo.
-echo This will create BlindCoachingApp.exe that can run
-echo on any Windows computer without Python installed.
+echo Opening coaching_questions.txt for editing...
 echo.
-pause
-call build_clean.bat
-goto menu
-
-:simple_install
+echo You can modify the coaching questions and save the file.
+echo The changes will be applied immediately when you restart the app.
 echo.
-echo ===============================================
-echo           SIMPLE INSTALLATION
-echo ===============================================
-echo.
-echo This will install Flask and run the application.
-echo.
-pause
-call install_simple.bat
+if exist "coaching_questions.txt" (
+    notepad coaching_questions.txt
+) else (
+    echo coaching_questions.txt not found
+)
 goto menu
 
 :docs
@@ -103,10 +94,13 @@ goto exit
 echo.
 echo Thank you for using Blind Coaching App!
 echo.
-echo For support or questions:
-echo - Check the documentation files
-echo - Review the Python script comments
-echo - Modify coaching_questions.txt for custom questions
+echo QUICK TIPS:
+echo - Modify coaching_questions.txt to customize questions
+echo - Use Option 2 to easily edit questions with Notepad
+echo - The app runs in your web browser at localhost:5000
+echo - Press Ctrl+C in the terminal to stop the application
+echo.
+echo For support: Check the documentation files
 echo.
 pause
 
