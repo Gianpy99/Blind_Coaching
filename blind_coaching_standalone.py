@@ -459,8 +459,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 }
             });
             
-            specific = specific.replace(/^(I want to|I will|I would like to|I plan to|My goal is to)\\s*/i, '').trim();
-            timeframe = timeframe.replace(/^(by|within|in|before)\\s*/i, '').trim();
+            specific = specific.replace(/^(I want to|I will|I would like to|I plan to|My goal is to)\s*/i, '').trim();
+            timeframe = timeframe.replace(/^(by|within|in|before)\s*/i, '').trim();
             
             let goalStatement = '';
             
@@ -469,7 +469,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             } else if (specific) {
                 goalStatement = `I will ${specific}`;
             } else {
-                goalStatement = combinedAnswers.replace(/\\s+/g, ' ').trim();
+                goalStatement = combinedAnswers.replace(/\s+/g, ' ').trim();
                 if (!goalStatement.toLowerCase().startsWith('i will')) {
                     goalStatement = 'I will ' + goalStatement.charAt(0).toLowerCase() + goalStatement.slice(1);
                 }
