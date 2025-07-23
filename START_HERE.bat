@@ -66,19 +66,15 @@ goto menu
 :docs
 echo.
 echo ===============================================
-echo             DOCUMENTATION FILES
+echo             DOCUMENTATION
 echo ===============================================
 echo.
-echo Opening documentation...
-if exist "README_Standalone.md" (
-    notepad README_Standalone.md
+echo Opening README.md - Complete documentation and guide
+echo.
+if exist "README.md" (
+    notepad README.md
 ) else (
-    echo README_Standalone.md not found
-)
-if exist "PROJECT_SUCCESS.md" (
-    notepad PROJECT_SUCCESS.md
-) else (
-    echo PROJECT_SUCCESS.md not found
+    echo README.md not found
 )
 goto menu
 
